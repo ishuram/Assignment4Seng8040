@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<title>New Vehicle</title>
+<meta charset="UTF-8">
+
+<script src="storage1.js"></script>
+<link rel="stylesheet" href="StorageStyle.css">
+</head>
+<body onload="doShowAll()">
+	<h1>Enter Contact and Vehicle Information</h1>
+	<form name=VehicleList action="" method="POST">
+
+		<div id="PlayArea">
+			<table>
+				<tr>
+
+					<td><b>Name</b><input type=text name=name pattern="[A-Za-z]+ [A-Za-z]+" id=t1 ></td>
+					<td><b>Address</b><input type=text name=address required id=t2></td>
+					<td><b>Postal Code</b><input type=text name=postal pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" id=t3  ></td>
+					<td><b>Phone:<input type="text" name=phone pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Phone must be ###-###-####" id=t4 ></td>
+					<td><b>Email</b><input type=email name=email id=t5></td>
+
+				</tr>
+				<tr><td><b>Vehicle make</b><input type=text  id=t6 name=vehicle ></td>
+				<td><b>Model</b><input type=text name=model id=t7></td>
+				<td><b>Year</b><input type=text  name=year id=t8 pattern="[0-9]{4}"></td>
+				</tr>
+
+				<tr>
+					<td>
+					    <input type=button value="Save"   onclick="SaveItem()"> 
+					    
+					  </td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="items_table">
+			<h2>Vehicle List</h2>
+			<table id=list></table>
+			<p>
+				<label><input type=button value="Clear" onclick="ClearAll()">
+					
+			</p>
+		</div>
+		<div>
+		<h2> <a href="index.html">Home</a></h2>
+		</div>
+	</form>
+
+</body>
+</html>
